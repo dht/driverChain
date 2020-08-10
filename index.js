@@ -1,8 +1,9 @@
-const AppDriver = require("./utils/AppDriver");
+const AppDriver = require("./classes/AppDriver");
 const expect = require("./utils/expect");
 
 const run = async () => {
   const appDriver = new AppDriver();
+  appDriver.init();
 
   await appDriver.when
     .fillInForm({ name: "James Bond" })
